@@ -7,3 +7,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : Stiphen Campos
 */
 
+* {
+	background-color: whitesmoke;
+        font-family: sans-serif;
+}
