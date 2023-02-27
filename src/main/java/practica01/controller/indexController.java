@@ -24,7 +24,7 @@ public class indexController {
     @GetMapping("/")
     public String inicio(Model model) {
         log.info("Ahora desde MVC");
-        var estados = estadoService.getEstados();
+        var estados = EstadoService.getEstados();
         model.addAttribute("estados", estados);
         return "index";
 
