@@ -14,53 +14,35 @@ import practica01.dao.EstadoDao;
 @Service
 public class EstadoServiceIMPL implements EstadoService {
 
-        @Autowired
-        EstadoDao estadoDao;
+    @Autowired
+    EstadoDao estadoDao;
 
-         
 @Override
-
-    
-        @EstadoServiceIMPLOnly     
-
-    = true)  public    List<Estado> EstadoServiceIMPL {
-
-        
-                return (List<Estados>) estadoDao.findAll();
-    
-
-        }     @Override
-
-    
-        @EstadoServiceIMPLOnly 
-
-    
-
-    = true)  public Estado getEstado(Estado estado) {
-                return estadoDao.findById(estado.getIdEstado()).orElse(null);
-    
-        }
-    @Override
-
-        @Transactional
-
-    
-        public void save(Estado estado) {
-                estadoDao.save(estado);
-    
-        }     @Override
-
-    
-        @Transactional
-
-        public void delete(Estado estado) {
-                estadoDao.deleteById(estado.getIdEstado());
-    
-
-    }
+@Transactional(readOnly = true)
+    public  List<Estado> getEstados() {
+        return (List<Estado>) estadoDao.findAll();
+    }
+@Override
+@Transactional(readOnly = true)
+    public Estado getEstado(Estado estado) {
+        return estadoDao.findById(estado.getIdEstado()).orElse( null);
+    }
+  
 
     @Override
-    public List<Object> getEstados() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+    @Transactional
+    public void save(Estado estado) {
+        estadoDao.save(estado);
+
     }
+
+    @Override
+    @Transactional
+
+    public void delete(Estado estado) {
+        estadoDao.deleteById(estado.getIdEstado());
+
+    }
+
 }

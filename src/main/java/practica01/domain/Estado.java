@@ -22,11 +22,11 @@ public class Estado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int idEstado; // hibernate lo transforma id_cliente
+    private Long idEstado; // hibernate lo transforma id_cliente
     private String nombreEstado;
     private String nombreCapital;
-    private int numPoblacion;
-    private int numProvincias;
+    private Integer numPoblacion;
+    private Integer numProvincias;
 
     public Estado() {
 
