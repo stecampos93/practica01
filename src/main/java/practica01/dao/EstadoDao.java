@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package practica01.dao;
-import practica01.domain.Cliente;
+import practica01.domain.Estado;
 import org.springframework.data.repository.CrudRepository;
 /**
  *
  * @author Stiphen Campos
  */
-public interface ClienteDao extends CrudRepository<Cliente, Long> {
+public interface EstadoDao extends CrudRepository<Estado, Long> {
     
 }
