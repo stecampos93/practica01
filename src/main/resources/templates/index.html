@@ -27,8 +27,8 @@
                     <td th:text="${item.nombreCapital}"></td>
                     <td th:text="${item.numPoblacion}"></td>
                     <td th:text="${item.numProvincias}"></td>  
-                    <td th:href="${/modificarEstado/}+ $ {item.idEstado">Modificar</td>  
-                    <td th:href="${/eliminarEstado/}+ $ {item.idEstado">Eliminar</td> 
+                    <td th:href="@{/modificarEstado/}+ ${item.idEstado">Modificar</td>  
+                    <td th:href="@{/eliminarEstado/}+ ${item.idEstado">Eliminar</td> 
             <tr/>
             </tbody>
         </table>
