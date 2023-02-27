@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Datos del Estado</h1>
+        <a th:href="{/}">Regresar</a>
+        <br/><!-- comment -->
+        <br/>
+        <form th:action="@{/guardarEstado}"
+              method="POST"
+              th:object="${estado}">
+            <input type="hidden" name="idEstado" th:field="*{idEstado}" />
+            <label for="nombreEstado">NombreEstado</label><br/>
+            <input type="text" id="nombreEstado" name="nombreEstado" th_field="{nombreEstado}">
+            
+            <label for="nombreCapital">nombreCapital</label><br/>
+            <input type="text" id="nombreCapital" name="nombreCapital" th_field="{nombreCapital}">
+            
+            <label for="numPoblacion">numPoblacion</label><br/>
+            <input type="number" id="numPoblacion" name="numPoblacion" th_field="{numPoblacion}"><!-- comment -->
+            
+            <label for="numProvincias">numProvincias</label><br/>
+            <input type="number" id="numProvincias" name="numProvincias" th_field="{numProvincias}"><br/><br/>
+            
+            <input type="submit" name="guardar" value="Guardar" />
+            
+            
+        </form>
+    </body>
+</html>
